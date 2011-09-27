@@ -1,10 +1,10 @@
 class etckeeper {
   case $operatingsystem {
-    fedora: {
+    /(RedHat|Fedora|CentOS|Scientific)/: {
       $highlevel_package_manager = "yum"
       $lowlevel_package_manager ="rpm"
     }
-    ubuntu: {
+    /(Debian|Ubuntu)/: {
       $highlevel_package_manager = "apt"
       $lowlevel_package_manager ="dpkg"
     }
