@@ -1,3 +1,22 @@
+# Class: etckeeper
+#
+# This class installs and configures etkceeper with git
+#
+# Parameters:
+#   $highlevel_package_manager:
+#       this variable sets the high level package manager depending on your OS
+#   $lowlevel_package_manager:
+#       this variable sets the low level package manager depending on your OS
+#
+# Actions:
+#   Install etckeeper, create config and initialize git repository in /etc
+#
+# Requires:
+#   - Package['git'] or ['git-core'] depending on your OS
+#
+# Sample Usage:
+#   include etckeeper
+#
 class etckeeper {
   case $operatingsystem {
     /(RedHat|Fedora|CentOS|Scientific)/: {
